@@ -1,58 +1,47 @@
-# Crime Data Analysis Project
+# 🔍 Crime Against Women in India — Data Analysis & Visualization
 
-## Project Overview
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-EDA-lightgrey?logo=pandas)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![Seaborn](https://img.shields.io/badge/Seaborn-Heatmaps-teal)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-This project analyzes crime data related to women across different states in India over multiple years.
-The analysis explores patterns in crime types, identifies states with the highest number of incidents, and examines trends in crimes over time. The goal is to understand which crimes occur most frequently, where they occur, and how crime patterns change across years.
+---
 
-## Tools Used
+## 📌 Project Overview
 
-* Python
-* Pandas (data analysis and manipulation)
-* Matplotlib (data visualization)
-* Jupyter / VS Code Notebook
+This project analyzes **15+ years of NCRB (National Crime Records Bureau) data** on crimes against women across all 35 Indian states and union territories. The goal was to move beyond surface-level statistics and find patterns that could inform policy and public awareness.
 
-## Dataset Description
+**Key Question:** Where are crimes most concentrated, and do socioeconomic indicators like literacy affect crime reporting?
 
-The dataset contains records of crimes against women across different states in India over several years.
-Each row represents crime data for a specific state and year, with separate columns for different types of crimes.
+---
 
-Key columns include:
+## 📊 Dataset
 
-* State – Name of the state
-* Year – Year of recorded data
-* Rape – Number of rape cases reported
-* K&A – Kidnapping and Abduction cases
-* DD – Dowry Death cases
-* AoW – Assault on Women
-* AoM – Assault on Minors
-* DV – Domestic Violence
-* WT – Women Trafficking
+| Property | Detail |
+|---|---|
+| Source | National Crime Records Bureau (NCRB), Government of India |
+| Time Range | 2001 – 2021 |
+| Rows | 5,000+ records |
+| Columns | State, Year, Crime Type, Count |
+| Crime Types | Rape, Kidnapping, Dowry Deaths, Domestic Violence, Assault, Trafficking |
 
-## Key Analysis Performed
+---
 
-* Explored the dataset to understand crime categories, states, and yearly records.
-* Analyzed total crimes by state to identify regions with the highest incidents.
-* Identified the most common crime categories contributing to overall crime totals.
-* Examined trends in crimes over the years to observe long-term changes.
-* Compared crime patterns across different states to understand regional differences.
+## 🔧 Tech Stack
 
-## Key Insights
+- **Python 3.10**
+- **Pandas** — data cleaning, EDA, aggregation
+- **Matplotlib** — trend lines, bar charts
+- **Seaborn** — heatmaps, distribution plots
+- **Jupyter Notebook** — interactive analysis
 
-* Uttar Pradesh recorded the highest total crimes among the states in the dataset.
-* Kidnapping & Abduction (K&A) contributes significantly to the total crime counts.
-* Crime incidents show an increasing trend over the years in the dataset.
-* Some states consistently report higher crime numbers, indicating possible regional differences.
+---
 
-## Limitations
+## 🧹 Data Cleaning Steps
 
-* The dataset provides crime data at the state level, so district or city-level analysis cannot be performed.
-* Some contextual factors such as population size, reporting practices, and socio-economic conditions are not included in the dataset.
-* The analysis focuses on recorded cases, which may differ from actual crime occurrences due to reporting differences.
-
-## Implications / Recommendations
-
-* Investigate factors contributing to the increasing trend in crimes across the years.
-* Focus preventive measures and awareness programs in states with consistently high crime numbers.
-* Conduct deeper analysis at district or city levels to identify local crime hotspots.
-* Strengthen policies and monitoring mechanisms aimed at reducing crimes against women.
+- Handled null values across 10+ crime category columns
+- Standardized inconsistent state name spellings
+- Cast year and count columns to correct numeric types
+- Removed duplicate records
+- Created derived columns: total crimes per state, Y
